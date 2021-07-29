@@ -3,8 +3,10 @@ import "styled-components";
 declare module "styled-components" {
   export interface DefaultTheme {
     mode: {
-      bgColor: string;
-      textColor: string;
+      mainBackground: string;
+      borderColor: string;
+      text: string;
+      toggleShadow: string;
     };
   }
 }
