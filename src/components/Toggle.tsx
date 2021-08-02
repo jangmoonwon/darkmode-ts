@@ -32,7 +32,11 @@ const Wrapper = styled.button<ToggleWrapper>`
   width: 96px;
   height: 48px;
   border-radius: 30px;
-   box-shadow: ${({theme}) => theme.mode.toggleShadow};
+  box-shadow: ${({ theme }) => theme.mode.toggleShadow};
+  cursor: pointer;
+  &:hover {
+    background: ${({ theme }) => theme.mode.toggleHover};
+  }
 `;
 
 export default Toggle;
