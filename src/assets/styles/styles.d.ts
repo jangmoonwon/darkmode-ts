@@ -8,6 +8,7 @@ declare module "styled-components" {
       text: string;
       toggleShadow: string;
       toggleHover: string;
+      hoverText: string;
     };
   }
 }

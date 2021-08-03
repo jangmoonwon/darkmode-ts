@@ -10,16 +10,18 @@ interface ToggleWrapper {
   themeMode: string;
 }
 
+
 const Toggle = ({ themeMode, toggleTheme }: ToggleBtn) => {
   return (
     <Wrapper onClick={toggleTheme} themeMode={themeMode}>
-      {themeMode === "dark" ? "🌚" : "🌝"}
+      {themeMode === "dark" ? "라이트" : "다크"}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.button<ToggleWrapper>`
   background: ${({ theme }) => theme.mode.mainBackground};
+  color: ${({theme}) => theme.mode.text};
   position: fixed;
   z-index: 999999;
   bottom: 4%;
@@ -36,7 +38,14 @@ const Wrapper = styled.button<ToggleWrapper>`
   cursor: pointer;
   &:hover {
     background: ${({ theme }) => theme.mode.toggleHover};
+    border-color: transparent;
+    color: ${({ theme }) => theme.mode.hoverText};
   }
+`;
+
+const Img = styled.img`
+  width: 30px;
+  height: 30px;
 `;
 
 export default Toggle;
